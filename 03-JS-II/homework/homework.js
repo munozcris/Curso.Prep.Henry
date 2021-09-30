@@ -96,7 +96,7 @@ function estaEnRango(numero) {
   // Devuelve "true" si "numero" es menor que 50 y mayor que 20
   // De lo contrario, devuelve "false"
   // Tu código:
-  return (20 < numero > 50);
+  return (numero > 50 && numero < 20);
 }
 
 function esEntero(numero) {
@@ -107,10 +107,7 @@ function esEntero(numero) {
   // De lo contrario, devuelve "false"
   // Pista: Puedes resolver esto usando `Math.floor`
   // Tu código:
-  if (numero % 2 === 0) {
-    return true;
-  }
-  return false;
+  return numero % 1 === 0;
 }
 
 function fizzBuzz(numero) {
@@ -158,7 +155,7 @@ function esPrimo(numero) {
   // Pista: un número primo solo es divisible por sí mismo y por 1
   // Pista 2: Puedes resolverlo usando un bucle `for`
   // Nota: Los números 0 y 1 NO son considerados números primos
-  if (numero === 0 || numero === 1) {
+  if (numero < 2) {
     return false;
   }
   if (numero === 2) {
@@ -188,7 +185,7 @@ function tablaDelSeis(){
   //La función devuelve un array con los resultados de la tabla de multiplicar del 6 en orden creciente.
   //Escribe tu código aquí   
   let lista = [];
-  for (let i = 0; i <= 10; index++) {
+  for (let i = 0; i <= 10; i++) {
     lista.push(6*i);
   }
   return lista;
@@ -197,13 +194,8 @@ function tablaDelSeis(){
 function tieneTresDigitos(numero){
   //Leer un número entero y retornar true si tiene 3 dígitos. Caso contrario, retorna false.
   //Escribe tu código aquí
-  var cifras = 0;
-  while (numero != 0) {
-    numero / 10;
-    cifras ++;
-  }
-  if (cifras === 3) {
-    return true;
+  if(numero > 99 && numero < 1000){
+    return true
   }
   return false;
 }
@@ -216,7 +208,7 @@ function doWhile(numero) {
   do {
     numero = numero + 5;
     contador++;
-  } while (contador<=8);
+  } while (contador<8);
   return numero;
 }
 
